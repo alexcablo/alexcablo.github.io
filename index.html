@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Página Personal</title>
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Bienvenido a mi Página Personal</h1>
-    <p>Hola, soy [Tu Nombre] y esta es mi página personal.</p>
-    <h2>Sobre Mí</h2>
-    <p>Un poco sobre ti y tus intereses.</p>
-    <h2>Experiencia</h2>
-    <ul>
-        <li>Experiencia laboral o educación</li>
-        <li>Otra experiencia relevante</li>
-    </ul>
-    <h2>Proyectos</h2>
-    <ul>
-        <li>Proyecto 1</li>
-        <li>Proyecto 2</li>
-    </ul>
-    <h2>Contacto</h2>
-    <p>Información de contacto, como correo electrónico y enlaces a perfiles en redes sociales.</p>
+    <main>
+        <form>
+            <input type="text" id="entradaTexto" placeholder="Ingresa tu texto">
+            <button type="button" onclick="mostrarTexto()">Mostrar</button>
+        </form>
+        <div id="resultado"></div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
