@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Página Web</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+      padding: 30px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenido a mi Página Personal</h1>
-    <p>Hola, soy [Tu Nombre] y esta es mi página personal.</p>
-    <img src="mi_foto.jpg" alt="Mi Foto">
-    <h2>Sobre Mí</h2>
-    <p>Un poco sobre ti y tus intereses.</p>
-    <h2>Experiencia</h2>
-    <ul>
-        <li>Experiencia laboral o educación</li>
-        <li>Otra experiencia relevante</li>
-    </ul>
-    <h2>Proyectos</h2>
-    <ul>
-        <li>Proyecto 1</li>
-        <li>Proyecto 2</li>
-    </ul>
-    <h2>Contacto</h2>
-    <p>Información de contacto, como correo electrónico y enlaces a perfiles en redes sociales.</p>
+  <div class="container">
+    <div class="form-container">
+      <h1>Generador de Texto</h1>
+      <form id="formTexto">
+        <div class="form-group">
+          <input type="text" id="inputText" class="form-control" placeholder="Escribe un texto">
+        </div>
+        <button type="submit" class="btn btn-primary">Generar</button>
+      </form>
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("formTexto").addEventListener("submit", function(event) {
+      event.preventDefault();
+      generarTexto();
+    });
+
+    function generarTexto() {
+      var inputText = document.getElementById("inputText").value;
+      // Llamar a la función en el backend para generar el texto
+      // y mostrarlo en el div de salida
+      // Aquí puedes agregar la lógica del backend, como una petición a un API o una llamada a un servidor
+      var output = document.getElementById("output");
+      output.innerText = "Texto generado: " + inputText;
+    }
+  </script>
 </body>
 </html>
